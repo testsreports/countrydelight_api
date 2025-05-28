@@ -1,0 +1,11 @@
+{
+    "Cookie": "AWSALB=gMdIH/MgECopaggypakR76Ejdm9qu8XOYfMrPJHSzXVZCj0e0WGjNRP+9QeHLdaKZlQj6DCOPl3F2I5Kojh6Awc/G+HzK0lVzNeCZ4oIMA2JKoypcli0DfuVJPmH; AWSALBCORS=gMdIH/MgECopaggypakR76Ejdm9qu8XOYfMrPJHSzXVZCj0e0WGjNRP+9QeHLdaKZlQj6DCOPl3F2I5Kojh6Awc/G+HzK0lVzNeCZ4oIMA2JKoypcli0DfuVJPmH; AWSALB=I8Wn6RLptYWUp1in75ggTOO0Cf0GKbNgmA8FQYbcGwerxqGkJhfkWCszKMjBNeLGCQfIJwZrkNBXGhb+CrArPXFfOvFzll9UPZj2sh3f4eMjRmepIZXl5Z89k0hp; AWSALBCORS=I8Wn6RLptYWUp1in75ggTOO0Cf0GKbNgmA8FQYbcGwerxqGkJhfkWCszKMjBNeLGCQfIJwZrkNBXGhb+CrArPXFfOvFzll9UPZj2sh3f4eMjRmepIZXl5Z89k0hp",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "6ab3bd67-c26a-4e46-8ec8-7e56d69eafe4",
+    "Host": "qa-delivery.countrydelight.in",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "395"
+}

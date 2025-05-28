@@ -1,0 +1,71 @@
+try{
+    const jsonData = pm.response.json();
+    pm.test("Printing Crate QR", function () {
+     pm.collectionVariables.set("crate_QR", jsonData[0].qr_code);
+     console.log(jsonData[0].qr_code)
+    });
+
+    pm.test("Printing Crate Type", function () {
+     if(jsonData[0].tag == 0){
+        console.log("Regular Old Format Crate")
+     }
+     else if(jsonData[0].tag == 1){
+        console.log("Regular New Format Crate")
+     }
+     else if(jsonData[0].tag == 2){
+        console.log("Bad Quality Crate")
+     }
+     else if(jsonData[0].tag == 3){
+        console.log("Expired Item Crate")
+     }
+     else{
+        console.log(`Something went wrong, The crate tag in response is ${jsonData[0].tag}, which is not belongs to any category`)
+     }
+    });
+}
+catch(err){
+    console.log(err)
+    if(err){
+        pm.test("Unsuccessful API response", function () {
+            pm.response.not.to.have.status(201);
+});
+    }
+}
+
+
+pm.test("Successful POST request", function () {
+    pm.expect(pm.response.code).to.be.oneOf([201, 202]);
+});
+
+
+const schema = {
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "crate_uid": { "type": "string" },
+      "crate_id": { "type": "integer" },
+      "centre_id": { "type": "integer" },
+      "product_id": { "type": "integer" },
+      "status": { "type": "integer" },
+      "scanned_unit": { "type": "integer" },
+      "weight": { "type": "string" },
+      "manual_quantity": { "type": "integer" },
+      "manual_weight": { "type": "string" },
+      "table_detail_id": { "type": null },
+      "qr_code": { "type": "string" },
+      "date": { "type": "string", "format": "date" },
+      "tag": { "type": "integer" }
+    },
+    "required": [
+      "crate_uid", "crate_id", "centre_id", "product_id", "status",
+      "scanned_unit", "weight", "manual_quantity", "manual_weight",
+      "table_detail_id", "qr_code", "date", "tag"
+    ]
+  }
+};
+
+
+pm.test('Schema is valid', function () {
+    pm.response.to.have.jsonSchema(schema);
+});
