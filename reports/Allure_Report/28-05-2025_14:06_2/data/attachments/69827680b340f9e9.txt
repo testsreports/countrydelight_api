@@ -1,0 +1,31 @@
+{
+    "app_version": "7.8",
+    "centre_id": 38,
+    "date": "2024-03-28",
+    "packaging_end_time": "2024-03-28 21:13:23",
+    "packaging_start_time": "2024-03-28 21:12:28",
+    "product_packed_details": [
+        {
+            "force_scanned_count": 0,
+            "manual_quantity": 0,
+            "manual_weight": 0,
+            "product_id": 115,
+            "qr_codes": [
+                "0000024#280324#900#ABBD#002",
+                "0000024#280324#900#ABBD#003"
+            ],
+            "weight": "1800"
+        },
+        {
+            "force_scanned_count": 0,
+            "manual_quantity": 0,
+            "manual_weight": 0,
+            "product_id": 114,
+            "qr_codes": [
+                "0000023#280324#900#ABBD#001"
+            ],
+            "weight": "900"
+        }
+    ],
+    "source": 1
+}

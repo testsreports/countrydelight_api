@@ -1,0 +1,1 @@
+[{"crate_uid":"13","crate_id":383689,"table_detail_id":72,"product_id":353,"sku":"0000593","product_name":"Baby Apple - 450 gm","status":1,"scanned_unit":20,"weight":"9950.000","manual_quantity":0,"manual_weight":"0.000","qr_code":"0000593@13@2025-05-28@20@9950.000@GGN-FV","date":"2025-05-28","force_scanned_count":0}]

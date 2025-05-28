@@ -1,0 +1,1 @@
+{"crate_uid":"4","crate_id":357163,"table_detail_id":72,"product_id":114,"sku":"0000023","product_name":"Onion - 900 gm","status":1,"scanned_unit":19,"weight":"17100.000","manual_quantity":0,"manual_weight":"0.000","qr_code":"0000023@4@2024-03-18@19@17100.000@GGN-FV","date":"2024-03-18","force_scanned_count":0}

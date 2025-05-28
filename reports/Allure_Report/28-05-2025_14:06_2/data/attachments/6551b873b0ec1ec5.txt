@@ -1,0 +1,1 @@
+[{"crate_uid":"38","crate_id":383714,"centre_id":38,"product_id":115,"status":1,"scanned_unit":20,"weight":"18000.000","manual_quantity":0,"manual_weight":"0.000","table_detail_id":null,"qr_code":"0000024@38@2025-05-28@20@18000.000@GGN-FV","date":"2025-05-28","tag":0}]

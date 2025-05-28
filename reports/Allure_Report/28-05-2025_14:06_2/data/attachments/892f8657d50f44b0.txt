@@ -1,0 +1,19 @@
+const jsonData=pm.response.json();
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("TokenCdDel", function(){
+    pm.globals.set("TokenCdPackaging",jsonData.access_token);
+});
+
+pm.test("Setting userId into collection variable", function(){
+    pm.collectionVariables.set("userId",jsonData.data.user_id);
+});
+
+pm.test("Storing Bad Quality reasons", function(){
+    var badQualityReason = jsonData.data.fnv_inv_reasons.filter(item => item.inventory_type === 4);
+    pm.collectionVariables.set("badQualityReason",JSON.stringify(badQualityReason));
+});
+
