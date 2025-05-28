@@ -1,0 +1,14 @@
+// for Gurgaon Sohna Road=26 , Gurgaon Ardee City Mrng=72, Gurgaon Ardee City Morn=75
+var tableId = 72
+pm.collectionVariables.set("tableId", tableId)
+
+var plantId = 6
+// Use these Plant ID "NCR Plant = 2" , "Gurgoan F&V Process Unit = 6"
+pm.collectionVariables.set("plantID", plantId);
+
+function getCurrentDate1() {
+    const moment = require('moment');
+    dateToday = moment().format("YYYY-MM-DD");
+    return dateToday;
+}
+pm.collectionVariables.set('currentDate', getCurrentDate1());

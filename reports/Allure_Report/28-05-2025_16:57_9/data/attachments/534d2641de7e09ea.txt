@@ -1,0 +1,1 @@
+[{"id":508807,"date":"2025-05-28","franchise_id":16,"product_id":91,"inventory_type":6,"quantity":"320.000","weight":"0.000","manual_quantity":"0.00","manual_weight":"0.000","is_completed":false,"reasons":[],"rescan_count":20}]

@@ -1,0 +1,98 @@
+try{
+    const jsonData = pm.response.json();
+    pm.test("Printing Crate QR", function () {
+     pm.collectionVariables.set("crate_QR", jsonData[0].qr_code);
+     console.log(jsonData[0].qr_code)
+    });
+}
+catch(err){
+    console.log(err)
+    if(err){
+        pm.test("Unsuccessful API response", function () {
+            pm.response.not.to.have.status(201);
+});
+    }
+}
+
+
+pm.test("Successful POST request", function () {
+    pm.expect(pm.response.code).to.be.oneOf([201, 202]);
+});
+
+
+
+var template = `
+<style type="text/css">
+    .tftable {
+        font-size:14px;
+        color:#333333;
+        width:100%;
+        border-width: 1px;
+        border-color: #87ceeb;
+        border-collapse: collapse;
+        }
+    .tftable th {
+        font-size:18px;
+        background-color:#87ceeb;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #87ceeb;
+        text-align:left;
+        }
+    .tftable tr {
+        background-color:#ffffff;
+        }
+    .tftable td {
+        font-size:14px;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #87ceeb;
+        }
+    .tftable tr:hover {
+        background-color:#e0ffff;
+        }
+</style>
+
+<table class="tftable" border="1">
+    <tr>
+        <th>Crate UID</th>
+        <th>Crate ID</th>
+        <th>Centre ID</th>
+        <th>Product ID</th>
+        <th>Status</th>
+        <th>Scanned Unit</th>
+        <th>Weight</th>
+        <th>Manual Quantity</th>
+        <th>Manual Weight</th>
+        <th>Table Detail ID</th>
+        <th>QR Code</th>
+        <th>Date</th>
+        <th>Tag</th>
+    </tr>
+    
+    {{#each response}}
+        <tr>
+            <td>{{crate_uid}}</td>
+            <td>{{crate_id}}</td>
+            <td>{{centre_id}}</td>
+            <td>{{product_id}}</td>
+            <td>{{status}}</td>
+            <td>{{scanned_unit}}</td>
+            <td>{{weight}}</td>
+            <td>{{manual_quantity}}</td>
+            <td>{{manual_weight}}</td>
+            <td>{{table_detail_id}}</td>
+            <td>{{qr_code}}</td>
+            <td>{{date}}</td>
+            <td>{{tag}}</td>
+        </tr>
+    {{/each}}
+</table>
+`;
+
+function constructVisualizerPayload() {
+    return {response: pm.response.json()}
+}
+pm.visualizer.set(template, constructVisualizerPayload());

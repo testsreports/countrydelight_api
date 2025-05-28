@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"e77a767ee031759f5556fee5c8de8a23","name":"Automation","statistic":{"failed":6,"broken":0,"skipped":0,"passed":64,"unknown":0,"total":70}},{"uid":"e4d057133e067dc3e544402d5b4897ae","name":"Packaging","statistic":{"failed":0,"broken":0,"skipped":0,"passed":90,"unknown":0,"total":90}}]}

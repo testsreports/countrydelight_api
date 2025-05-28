@@ -1,0 +1,99 @@
+var no_of_diff_SKU_in_crate = 10
+
+// for Gurgaon Sohna Road=26 , Gurgaon Ardee City Mrng=72, Gurgaon Ardee City Morn=75
+var tableId = 26
+pm.collectionVariables.set("tableId", tableId)
+
+var plantId = 6
+// Use these Plant ID "NCR Plant = 2" , "Gurgoan F&V Process Unit = 6"
+pm.collectionVariables.set("plantID", plantId);
+
+var skuObj = [
+    { 'sku': '0000024', 'weight': 900, 'quantity': 20, 'productId': 115 },
+    { 'sku': '0000023', 'weight': 900, 'quantity': 20, 'productId': 114 },
+    { 'sku': '0000027', 'weight': 900, 'quantity': 20, 'productId': 116 },
+    { 'sku': '0000026', 'weight': 450, 'quantity': 20, 'productId': 117 },
+    { 'sku': '0000012', 'weight': 450, 'quantity': 20, 'productId': 105 },
+    { 'sku': '0000013', 'weight': 225, 'quantity': 20, 'productId': 106 },
+    { 'sku': '0000014', 'weight': 225, 'quantity': 20, 'productId': 107 },
+    { 'sku': '0000015', 'weight': 225, 'quantity': 20, 'productId': 108 },
+    { 'sku': '0000016', 'weight':  90, 'quantity': 20, 'productId': 109 },
+    { 'sku': '0000504', 'weight': 900, 'quantity': 20, 'productId': 120 },
+    { 'sku': '0000593','weight': 450,'quantity': 20,'productId': 353 },
+{ 'sku': '0000021','weight': 180,'quantity': 20,'productId': 112 },
+{ 'sku': '0000578','weight': 450,'quantity': 20,'productId': 258 },
+{ 'sku': '0000007','weight': 450,'quantity': 20,'productId': 101 },
+{ 'sku': '0000049','weight': 450,'quantity': 40,'productId': 171 },
+{ 'sku': '0000129','weight': 200,'quantity': 40,'productId': 453 },
+{ 'sku': '0000003','weight': 450,'quantity': 40,'productId': 98 } ,
+{ 'sku': '0000057','weight': 450,'quantity': 40,'productId': 180 }
+];
+
+var todayDate = getCurrentDate()
+
+function finalGenerator(skuObj) {
+    var results = []; // Variable to store final result
+
+    for (let i = 0; i < no_of_diff_SKU_in_crate; i++) {
+        var item = skuObj[i];
+        var resultEntry = {
+            "force_scanned_count": 0,
+            "manual_quantity": 0,
+            "manual_weight": 0,
+            "product_id": item.productId,
+            "qr_codes": qrCodeGenerator(item.sku, item.weight, item.quantity),
+            "weight": item.quantity * item.weight
+        };
+        results.push(resultEntry); // Pushes each product Object in result array
+        //console.log(resultEntry)
+    };
+    return results; // Return the final result
+}
+
+function qrCodeGenerator(sku, weight, quantity) {
+    var qrCodes = [];
+
+    for (var i = 0; i < quantity; i++) {
+        var flag = sku + "#" + getCurrentDate() + "#" + weight + "#" + '2312#'.concat(generateString(8));
+        qrCodes.push(flag);
+    }
+
+    return qrCodes;
+}
+
+const characters = '0123456789';
+function generateString(length) {
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * 10));
+    }
+
+    return result;
+}
+
+pm.collectionVariables.set("QRobjectDCenter", JSON.stringify(finalGenerator(skuObj)));
+
+function getCurrentDate() {
+    const moment = require('moment');
+    dateToday = moment().format("DDMMYY");
+    return dateToday;
+    //return '050524';
+}
+
+function getCurrentDate1() {
+    const moment = require('moment');
+    dateToday = moment().format("YYYY-MM-DD");
+    return dateToday;
+    //return '2024-05-05';
+
+}
+pm.collectionVariables.set('currentDate', getCurrentDate1());
+
+
+function getCurrentDatenTime() {
+    const moment = require('moment');
+    dateToday = moment().format("YYYY-MM-DD hh:mm:ss");
+    return dateToday;
+    //return '2024-05-05 01:01:01'
+}
+pm.collectionVariables.set("currentDatenTime", getCurrentDatenTime());
