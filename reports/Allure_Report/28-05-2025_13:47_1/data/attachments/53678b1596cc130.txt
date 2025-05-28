@@ -1,0 +1,21 @@
+{
+    "app_version": "",
+    "centre_id": 6,
+    "date": "2025-05-28",
+    "franchise_id": 16,
+    "inventory_type": 6,
+    "product_qr_details": [
+        {
+            "is_piece": false,
+            "manual_quantity": 0.0,
+            "manual_weight": 0.0,
+            "product_id": 91,
+            "qr_codes": [
+                "PWE#c8{>cf#1#ANU#95336499D","PWE#c8{>cf#1#ANU#05697185D","PWE#c8{>cf#1#ANU#07984681D","PWE#c8{>cf#1#ANU#59142356D","PWE#c8{>cf#1#ANU#33374413D","PWE#c8{>cf#1#ANU#63233880D","PWE#c8{>cf#1#ANU#27414299D","PWE#c8{>cf#1#ANU#82432545D","PWE#c8{>cf#1#ANU#54683097D","PWE#c8{>cf#1#ANU#99596813D","PWE#c8{>cf#1#ANU#60045492D","PWE#c8{>cf#1#ANU#33858803D","PWE#c8{>cf#1#ANU#37259137D","PWE#c8{>cf#1#ANU#46023341D","PWE#c8{>cf#1#ANU#55074908D","PWE#c8{>cf#1#ANU#01474505D","PWE#c8{>cf#1#ANU#56182481D","PWE#c8{>cf#1#ANU#08112077D","PWE#c8{>cf#1#ANU#28983699D","PWE#c8{>cf#1#ANU#57633347D"
+            ],
+            "quality_details": [],
+            "reasons": [],
+            "unit_size": 1
+        }
+    ]
+}

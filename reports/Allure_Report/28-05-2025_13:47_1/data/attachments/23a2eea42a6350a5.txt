@@ -1,0 +1,28 @@
+var center =  [
+	//{"id":13, "cms_id":32, "name":"Gurgaon Old Dairy"},
+	// {"id":132,"cms_id":135,"name":"Gurgaon Manesar"},
+	// {"id":57, "cms_id":71, "name":"Gurgaon F and V"},
+	// {"id":207,"cms_id":176,"name":"Gurgaon DLF-3 F and V"},
+	// {"id":44, "cms_id":63, "name":"Gurgaon Golf Course"},
+	// {"id":22, "cms_id":42, "name":"Gurgaon DLF-3"},
+	// {"id":219,"cms_id":190,"name":"Gurgaon Ardee City F and V"},
+	// {"id":229,"cms_id":200,"name":"Gurgaon Plant Dairy"},
+	// {"id":223,"cms_id":194,"name":"Gurgaon Old F and V"},
+	// {"id":208,"cms_id":177,"name":"Gurgaon Manesar F and V"},
+	// {"id":35, "cms_id":27, "name":"Gurgaon Plant F and V"},
+	// {"id":38, "cms_id":57, "name":"Gurgaon Sohna Road"},
+	{"id":6,  "cms_id":16, "name":"Gurgaon Ardee City"},
+	// {"id":220,"cms_id":191,"name":"Gurgaon Sohna Road F and V"},
+	// {"id":101,"cms_id":104,"name":"Gurgaon Golf Course Road F and V TEST"}
+    ]
+
+    pm.collectionVariables.set("center_Id", center[0].id)
+    pm.collectionVariables.set("franchise_Id", center[0].cms_id)
+
+function getCurrentDate() {
+    const moment = require('moment');
+    dateToday = moment().format("YYYY-MM-DD");
+    return dateToday;
+    //return '2024-04-12'
+}
+pm.collectionVariables.set('currentDateClosingStock', getCurrentDate());

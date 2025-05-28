@@ -1,0 +1,6 @@
+{
+    "app_code": "packaging_app",
+    "app_version": "",
+    "mobile": "",
+    "timestamp": "1748439997255"
+}

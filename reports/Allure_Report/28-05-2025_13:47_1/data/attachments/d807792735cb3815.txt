@@ -1,0 +1,11 @@
+{
+    "app_version": "",
+    "centre_id": 6,
+    "date": "2025-05-28",
+    "packaging_end_time": "2025-05-28 08:16:46",
+    "packaging_start_time": "2025-05-28 08:16:46",
+    "product_packed_details": [{"force_scanned_count":0,"manual_quantity":0,"manual_weight":0,"product_id":91,"qr_codes":["PWE#cxy]rp#1#ANU#40359888D","PWE#cxy]rp#1#ANU#16580143D","PWE#cxy]rp#1#ANU#59043855D","PWE#cxy]rp#1#ANU#83214807D","PWE#cxy]rp#1#ANU#55459204D","PWE#cxy]rp#1#ANU#07121538D","PWE#cxy]rp#1#ANU#24882919D","PWE#cxy]rp#1#ANU#66081488D","PWE#cxy]rp#1#ANU#68594894D","PWE#cxy]rp#1#ANU#81766156D","PWE#cxy]rp#1#ANU#46290437D","PWE#cxy]rp#1#ANU#34529321D","PWE#cxy]rp#1#ANU#50366546D","PWE#cxy]rp#1#ANU#80558634D","PWE#cxy]rp#1#ANU#68457957D","PWE#cxy]rp#1#ANU#59002815D","PWE#cxy]rp#1#ANU#52451686D","PWE#cxy]rp#1#ANU#18839811D","PWE#cxy]rp#1#ANU#47442365D","PWE#cxy]rp#1#ANU#53450307D"],"weight":20}],
+    "source": 1,
+    "tag":"RE",
+    "table_detail_id": null
+}

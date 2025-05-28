@@ -1,0 +1,11 @@
+{
+  "app_version": "",
+    "centre_id": 6,
+    "date": "2025-05-28",
+    "packaging_end_time": "2025-05-28 08:16:41",
+    "packaging_start_time": "2025-05-28 08:16:41",
+"product_packed_details": [{"force_scanned_count":0,"manual_quantity":0,"manual_weight":0,"product_id":114,"qr_codes":["0000023#120724#900#ANU#42122367"],"weight":900}],
+    "source": 1,
+    "tag":1
+ 
+}
