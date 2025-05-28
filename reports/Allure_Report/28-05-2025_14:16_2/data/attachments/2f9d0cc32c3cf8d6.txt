@@ -1,0 +1,21 @@
+{
+    "app_version": "7.8",
+    "centre_id": 38,
+    "crate_id": "357296",
+    "date": "2024-03-29",
+    "product_packed_details": [
+        {
+            "action": "addition",
+            "force_scanned_count": 0,
+            "manual_quantity": 0,
+            "manual_weight": 0,
+            "product_id": 115,
+            "qr_codes": [
+                "0000024#290324#900#ACCD#0026"
+            ],
+            "to_crate_id": "357296",
+            "weight": "900"
+        }
+    ],
+    "source": 1
+}

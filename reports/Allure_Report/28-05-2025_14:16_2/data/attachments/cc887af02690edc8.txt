@@ -1,0 +1,11 @@
+{
+  "app_version": "9.9",
+    "centre_id": 6,
+    "date": "2025-05-28",
+    "packaging_end_time": "2025-05-28 08:45:56",
+    "packaging_start_time": "2025-05-28 08:45:56",
+"product_packed_details": [{"force_scanned_count":0,"manual_quantity":0,"manual_weight":0,"product_id":91,"qr_codes":["PWE#cm^)\t#1#ANU#503087101D"],"weight":1}],
+    "source": 1,
+    "tag":"BQ"
+ 
+}
