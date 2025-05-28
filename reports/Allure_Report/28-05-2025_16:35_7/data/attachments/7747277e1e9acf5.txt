@@ -1,0 +1,23 @@
+{
+    "app_version": "9.9",
+    "crate_id": "357163",
+    "date": "2025-05-28",
+    "plant_id": 6,
+    "product_packed_details": [
+        {
+            "action": "addition",
+            "force_scanned_count": 0,
+            "manual_quantity": 0,
+            "manual_weight": 0,
+            "product_id": 114,
+            "qr_codes": [
+                "0000023#180324#900#2312#03021382",
+                "0000023#180324#900#2312#03021383",
+                "0000023#180324#900#2312#03021384"
+            ],
+            "to_crate_id": "357163",
+            "weight": "900"
+        }
+    ],
+    "table_detail_id": 72
+}

@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"e77a767ee031759f5556fee5c8de8a23","name":"Automation","statistic":{"failed":6,"broken":0,"skipped":0,"passed":52,"unknown":0,"total":58}},{"uid":"6f6cd2bac0d47f41cda836c6cb8b572f","name":"api","statistic":{"failed":0,"broken":0,"skipped":0,"passed":6,"unknown":0,"total":6}}]}
