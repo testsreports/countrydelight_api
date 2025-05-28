@@ -1,0 +1,16 @@
+var plantId = 6
+// Use these Plant ID "NCR Plant = 2" , "Gurgoan F&V Process Unit = 6"
+pm.collectionVariables.set("plantID", plantId);
+
+var tableDetail = 76
+// for Gurgaon Sohna Road=26 , Gurgaon Ardee City Mrng=72, Gurgaon Ardee City Morn=75
+pm.collectionVariables.set("tableDetail", tableDetail);
+
+pm.collectionVariables.set("todayDate", getCurrentDate());
+
+function getCurrentDate() {
+    const moment = require('moment');
+    dateToday = moment().format("YYYY-MM-DD");
+    //return dateToday;
+    return '2024-04-09'
+}

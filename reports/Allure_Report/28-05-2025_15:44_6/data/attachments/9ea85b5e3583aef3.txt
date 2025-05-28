@@ -1,0 +1,105 @@
+// for Gurgaon Sohna Road=26 , Gurgaon Ardee City Mrng=72, Gurgaon Ardee City Morn=75, FnV Test = 76
+var tableId = 26
+pm.collectionVariables.set("tableId", tableId)
+
+var plantId = 2
+// Use these Plant ID "NCR Plant = 2" , "Gurgoan F&V Process Unit = 6"
+pm.collectionVariables.set("plantID", plantId);
+
+//6-GurgaonArdeeCity, 13-GurgaonOldDairy, 22-GurgaonDLF-3, 35-GurgaonPlantFandV, 38-GurgaonSohnaRoad, 44-GurgaonGolfCourse, 57-GurgaonFandV, 101-GurgaonGolfCourseRoadFandVTEST, 132-GurgaonManesar, 207-GurgaonDLF-3FandV, 208- GurgaonManesarFandV, 219-GurgaonArdeeCityFandV, 220-GurgaonSohnaRoadFandV, 223-GurgaonOldFandV, 229-GurgaonPlantDairy	
+
+
+// Use only one of the skuObj
+//var skuObj = [ { 'sku': '0000593','weight': 450,'quantity': 20,'productId': 353 } ]; //
+//var skuObj = [ { 'sku': '0000023','weight': 900,'quantity': 20,'productId': 114 } ]; //Onion
+//var skuObj = [ { 'sku': '0000607','weight': 400,'quantity': 20,'productId': 220 } ]; //Blackberry 400gm
+//var skuObj = [ { 'sku': 'Blackberry','weight': 400,'quantity': 20,'productId': 1037 } ]; //Blackberry 400gm
+//var skuObj = [ { 'sku': '0000123','weight': 200,'quantity': 20,'productId': 447 } ];  //Buffalo Milk
+//var skuObj = [ { 'sku': '0000027','weight': 900,'quantity': 20,'productId': 116 } ];  // Tomato Hybrid
+//var skuObj = [ { 'sku': '0000021','weight': 180,'quantity': 2,'productId': 112 } ];  //Mushroom - 180 gm
+//var skuObj = [ { 'sku': '0000578','weight': 450,'quantity': 20,'productId': 258 } ];  //Apple kashmir
+//var skuObj = [ { 'sku': '0000007','weight': 450,'quantity': 20,'productId': 101 } ];  //Carrot - Red
+//var skuObj = [ { 'sku': '0000074','weight': 100,'quantity': 20,'productId': 270 } ];  //Baby Sapnich
+//var skuObj = [ { 'sku': '0000024','weight': 900,'quantity': 20,'productId': 115 } ];  //Potato
+//var skuObj = [ { 'sku': '0000049','weight': 450,'quantity': 40,'productId': 171 } ];  //Spring Onion
+//var skuObj = [ { 'sku': '0000021','weight': 0.180,'quantity': 20,'productId': 112 } ];  //
+//var skuObj = [ { 'sku': '0000047','weight': 450,'quantity': 5,'productId': 169 } ];  //Baby Apple
+var skuObj = [ { 'sku': '0000530','weight': 200,'quantity': 50,'productId': 162 } ];  //Apricot (Dried) 200gm
+//var skuObj = [ { 'sku': '0000101','weight': 450,'quantity': 20,'productId': 319 } ];  //Onion 450
+//var skuObj = [ { 'sku': '0000100','weight': 450,'quantity': 20,'productId': 318 } ];  //Potato 450
+
+// Potato - 0000024 , 115 __ Baby Spanich - 0000074 , 270 __ Carrot (Red) - 450 gm 0000007, 101
+
+
+//Getting used in preparing QR
+var todayDate = getCurrentDate()
+
+function finalGenerator(skuObj) {
+    var results = []; // Variable to store final result or QRs
+
+    for (let i = 0; i < 1; i++) {
+        var item = skuObj[i];
+        var resultEntry = {
+            "force_scanned_count": 0,
+            "manual_quantity": 0,
+            "manual_weight": 0,
+            "product_id": item.productId,
+            "qr_codes": qrCodeGenerator(item.sku, item.weight, item.quantity),
+            "weight": Math.floor((item.quantity * item.weight))
+        };
+        results.push(resultEntry); // Pushes each product Object in result array
+    };
+    return results; // Return the final result
+}
+
+function qrCodeGenerator(sku, weight, quantity) {
+    var qrCodes = [];
+
+    for (var i = 0; i < quantity; i++) {
+
+        //In case of current date variable "getCurrentDate()" can be used, In case of other else date, need to pass date
+        var flag = sku + "#" + getCurrentDate() + "#" + weight + "#" + '02#'.concat(generateString(8));
+        qrCodes.push(flag);
+        //console.log(flag)
+    }
+    return qrCodes;
+}
+
+//function to generate random number
+const characters = '0123456789';
+function generateString(length) {
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * 10));
+    }
+    return result;
+}
+
+//Storing Final data into collection variable
+pm.collectionVariables.set("QRobjectCenter", JSON.stringify(finalGenerator(skuObj)));
+
+//For creating Product QR
+function getCurrentDate() {
+    const moment = require('moment');
+    dateToday = moment().format("DDMMYY");
+    return dateToday;
+    return '201024'
+}
+
+function getCurrentDate1() {
+    const moment = require('moment');
+    dateToday = moment().format("YYYY-MM-DD");
+    return dateToday;
+    return '2024-10-20'
+}
+pm.collectionVariables.set('currentDate', getCurrentDate1());
+
+
+function getCurrentDatenTime() {
+    const moment = require('moment');
+    dateToday=moment().format("YYYY-MM-DD hh:mm:ss");
+    return dateToday;
+    return '2024-10-06 11:11:11'
+}
+pm.collectionVariables.set("currentDatenTime", getCurrentDatenTime());
+
