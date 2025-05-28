@@ -1,0 +1,2 @@
+level: log, messages: 0000024@113@2025-05-28@50@45000.000@GGN-FV@2
+level: log, messages: Bad Quality Crate

@@ -1,0 +1,64 @@
+const response = pm.response.json();
+
+try{
+    if (pm.response.code === 200) {
+    pm.collectionVariables.set("requestId", response.id);
+    console.info(`Request ID received is ${response.id}`)
+    }
+}
+catch(err){
+    console.error(err)
+}
+
+// @allure.label.suite=responseSuccess
+// @allure.label.tag=responseSuccess
+pm.test("✅ Response Status is 200", function () {
+    pm.expect(pm.response.code).to.eql(200);
+});
+
+pm.test("✅ OTP successfully sent to Mobile", function () {
+    pm.expect(pm.response.text()).to.include("OTP has been sent to the mobile number.");
+});
+
+pm.test("✅ Valid request ID", function(){
+    pm.expect(response.id).to.not.be.null;
+    pm.expect(response.id).to.not.be.undefined;
+    pm.expect(response.id).to.be.a('number');
+});
+
+
+pm.test("✅ Response 'data' is present", function () {
+    pm.expect(response.data).to.not.eql(null);
+});
+
+// @allure.label.suite=responseTime
+// @allure.label.tag=responseTime
+pm.test("✅ Response time is under 1000ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(3000);
+});
+
+
+
+var template = `
+<style type="text/css">
+    .tftable {font-size: 14px; color: #333333; width: 100%; border-width: 1px; border-color: #87ceeb; border-collapse: collapse;}
+    .tftable th {font-size: 18px; background-color: #87ceeb; border-width: 1px; padding: 8px; border-style: solid; border-color: #87ceeb; text-align: left;}
+    .tftable tr {background-color: #ffffff;}
+    .tftable td {font-size: 14px; border-width: 1px; padding: 8px; border-style: solid; border-color: #87ceeb;}
+    .tftable tr:hover {background-color: #e0ffff;}
+</style>
+
+<table class="tftable" border="2">
+    <tr>
+        <th>ID</th>
+        <th>Detail</th>
+    </tr>
+    
+    <tr>
+        <td>{{id}}</td>
+        <td>{{detail}}</td>
+    </tr>
+</table>
+`;
+
+pm.visualizer.set(template, response);

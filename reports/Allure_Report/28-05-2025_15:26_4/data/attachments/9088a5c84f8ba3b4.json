@@ -1,0 +1,12 @@
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3ODYzMSwiZXhwIjoxNzQ4NDQ3NzM2LCJpYXQiOjE3NDg0MjYxMzZ9.BtD8pWbPAZd0TB8xsHzQwtFvqJ1fFJISqjUGnkXeNSk",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "653076fd-a81d-4dd1-b545-30b31c123d9c",
+    "Host": "qa-delivery.countrydelight.in",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Cookie": "AWSALB=HJinzkfEyQrT6PnRUiSGrKyQPG30tWkir+4x8v+OIhD4d+NZ2btiMLOVpGHp1d5i0Sc90/aNx4UbT3gOBeSwEsEmJq2PreFJHqYKdMxfWNmpiRUjf/Ze1qRid+2Y; AWSALBCORS=HJinzkfEyQrT6PnRUiSGrKyQPG30tWkir+4x8v+OIhD4d+NZ2btiMLOVpGHp1d5i0Sc90/aNx4UbT3gOBeSwEsEmJq2PreFJHqYKdMxfWNmpiRUjf/Ze1qRid+2Y"
+}

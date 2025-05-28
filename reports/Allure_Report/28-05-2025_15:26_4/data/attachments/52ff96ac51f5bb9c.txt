@@ -1,0 +1,1 @@
+[{"crate_uid":"84","crate_id":383760,"table_detail_id":72,"product_id":180,"sku":"0000057","product_name":"Carrot (Ooty) - 450 gm","status":1,"scanned_unit":40,"weight":"19560.000","manual_quantity":0,"manual_weight":"0.000","qr_code":"0000057@84@2025-05-28@40@19560.000@GGN-FV","date":"2025-05-28","force_scanned_count":0}]
