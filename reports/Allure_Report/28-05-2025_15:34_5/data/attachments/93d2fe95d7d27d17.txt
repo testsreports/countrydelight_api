@@ -1,0 +1,7 @@
+const jsonData = pm.response.json();
+
+pm.test("Printing Crate QR", function () {
+    pm.collectionVariables.set("crate_QR", jsonData[0].qr_code);
+    console.log(jsonData[0].qr_code)
+});
+

@@ -1,0 +1,16 @@
+function generateISTTimestamp13Digit() {
+  const currentDate = new Date();
+  const istTimestamp = new Date(
+    currentDate.getTime() + currentDate.getTimezoneOffset() * 60000 + 5.5 * 3600000
+  );
+  const timestampMilliseconds = istTimestamp.getTime();
+  const thirteenDigitTimestamp = timestampMilliseconds.toString().padEnd(13, '0');
+
+  return thirteenDigitTimestamp;
+}
+const istTimestamp13Digit = generateISTTimestamp13Digit();
+console.log(istTimestamp13Digit);
+
+
+pm.collectionVariables.set("CurrentTime", istTimestamp13Digit);
+

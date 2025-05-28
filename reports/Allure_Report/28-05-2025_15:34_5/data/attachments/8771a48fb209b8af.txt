@@ -1,0 +1,1 @@
+[{"crate_uid":"140","crate_id":383816,"table_detail_id":26,"product_id":318,"sku":"0000100","product_name":"Potato - 450 gm","status":1,"scanned_unit":20,"weight":"9000.000","manual_quantity":0,"manual_weight":"0.000","qr_code":"0000100@140@2025-05-28@20@9000.000@GGN","date":"2025-05-28","force_scanned_count":0}]
