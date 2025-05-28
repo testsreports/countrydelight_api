@@ -1,0 +1,108 @@
+{
+    "app_version": "8.9",
+    "box_count": 1,
+    "center_id": 38,
+    "code": "1",
+    "container_details": [
+        {
+            "count": 1,
+            "type": 1,
+            "type_name": "Box"
+        },
+        {
+            "count": 0,
+            "type": 2,
+            "type_name": "Bag"
+        }
+    ],
+    "customer_id": 979896989,
+    "date": "2024-08-07",
+    "delivery_id": 375930840,
+    "franchise_id": 57,
+    "modification_code_list": [],
+    "modification_count": 0,
+    "oos_type": 2,
+    "package_details_id": "25895",
+    "packed_at": "2024-08-07 10:53:43",
+    "post_processing_type": 3,
+    "product_details": [
+        {
+            "breach_count": 0,
+            "force_scanned": false,
+            "id": 115,
+            "is_freebie": false,
+            "is_changed": false,
+            "is_manual": false,
+            "manual_quantity": 0,
+            "manual_weight": 0,
+            "order_quantity": 3.0,
+            "packed_qty_diff": 3.0,
+            "packed_weight_diff": 2700.0,
+            "qr_codes": [
+                "0000024#060824#900#ANU#66653168",
+                "0000024#060824#900#ANU#93970817",
+                "0000024#060824#900#ANU#86674186"
+            ],
+            "removed_qr_codes": [],
+            "scanned_quantity": 3.0,
+            "scanned_weight": 2700.0,
+            "unit_size": 900
+        },
+        {
+            "breach_count": 0,
+            "force_scanned": false,
+            "id": 114,
+            "is_freebie": false,
+            "is_changed": false,
+            "is_manual": true,
+            "manual_quantity": 0,
+            "manual_weight": 0,
+            "order_quantity": 3.0,
+            "packed_qty_diff": 0.0,
+            "packed_weight_diff": 0.0,
+            "qr_codes": [],
+            "removed_qr_codes": [],
+            "scanned_quantity": 0.0,
+            "scanned_weight": 0.0,
+            "unit_size": 900
+        },
+        {
+            "breach_count": 0,
+            "force_scanned": false,
+            "id": 169,
+            "is_freebie": false,
+            "is_changed": false,
+            "is_manual": true,
+            "manual_quantity": 0,
+            "manual_weight": 0,
+            "order_quantity": 3.0,
+            "packed_qty_diff": 0.0,
+            "packed_weight_diff": 0.0,
+            "qr_codes": [],
+            "removed_qr_codes": [],
+            "scanned_quantity": 0.0,
+            "scanned_weight": 0.0,
+            "unit_size": 450
+        },
+        {
+            "breach_count": 0,
+            "force_scanned": false,
+            "id": 128,
+            "is_freebie": false,
+            "is_changed": false,
+            "is_manual": true,
+            "manual_quantity": 0,
+            "manual_weight": 0,
+            "order_quantity": 3.0,
+            "packed_qty_diff": 0.0,
+            "packed_weight_diff": 0.0,
+            "qr_codes": [],
+            "removed_qr_codes": [],
+            "scanned_quantity": 0.0,
+            "scanned_weight": 0.0,
+            "unit_size": 200
+        }
+    ],
+    "route_id": 14035,
+    "status": 2
+}

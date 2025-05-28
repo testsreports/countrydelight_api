@@ -1,0 +1,1 @@
+[{"crate_uid":"251","crate_id":383927,"table_detail_id":72,"product_id":1165,"sku":"0001692","product_name":"Coconut Water Cupp - 1 pc (160ml)","status":1,"scanned_unit":40,"weight":"3940.000","manual_quantity":0,"manual_weight":"0.000","qr_code":"0001692@251@2025-05-28@40@3940.000@GGN-FV","date":"2025-05-28","force_scanned_count":0}]

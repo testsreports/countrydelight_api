@@ -1,0 +1,13 @@
+{
+    "Date": "Wed, 28 May 2025 11:21:01 GMT",
+    "Content-Length": "0",
+    "Connection": "keep-alive",
+    "Set-Cookie": "AWSALBCORS=OuSdrDEeEOuksEIxlSK/Y9AbzaecdGGDb5A1/xpIMdPUm4ZpN8OnbzZ0XnUhjuw6iXtWeE7qAvuG0bXEv3etUUePbjqa1HxYOSA52HebHG5UKW8INln8DXRqWBei; Expires=Wed, 04 Jun 2025 11:21:01 GMT; Path=/; SameSite=None; Secure",
+    "Server": "nginx/1.22.1",
+    "Vary": "Accept, Cookie, Origin",
+    "Allow": "POST, OPTIONS",
+    "X-Frame-Options": "DENY",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "same-origin",
+    "Cross-Origin-Opener-Policy": "same-origin"
+}
